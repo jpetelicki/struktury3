@@ -124,10 +124,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HashTableList.cpp" />
+    <ClCompile Include="HashTableOpen.cpp" />
     <ClCompile Include="struktury3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HashTableList.hpp" />
+    <ClInclude Include="HashTableOpen.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
