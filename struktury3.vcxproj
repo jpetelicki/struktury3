@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="HashTableList.cpp" />
     <ClCompile Include="HashTableOpen.cpp" />
     <ClCompile Include="struktury3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AVLTree.hpp" />
     <ClInclude Include="HashTableList.hpp" />
     <ClInclude Include="HashTableOpen.hpp" />
   </ItemGroup>
