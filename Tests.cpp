@@ -107,6 +107,9 @@ void Tests::testRemove() {
                 int* vals;
                 generateRandomData(currentSize, s, vals);
 
+                std::mt19937 genTest(s + 1000);
+                std::uniform_int_distribution<int> indexDist(0, currentSize - 1);
+
                 for (int r = 0; r < numRepeats; ++r) {
                     HashTableOpen openTable(currentSize * mult);
                     HashTableList listTable(currentSize * mult);
@@ -118,7 +121,8 @@ void Tests::testRemove() {
                         avlTable.insert(vals[i], vals[i]);
                     }
 
-                    int targetToRemove = vals[currentSize / 2];
+                    int randomIndex = indexDist(genTest);
+                    int targetToRemove = vals[randomIndex];
 
                     timer.start(); openTable.remove(targetToRemove); timer.stop();
                     totalOpen += timer.getNanoseconds();
